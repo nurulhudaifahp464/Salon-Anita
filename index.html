@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Anita - Manajemen Salon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Salon Anita</h1>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#janji">Janji</a></li>
+                <li><a href="#pembayaran">Pembayaran</a></li>
+                <li><a href="#umpanbalik">Umpan Balik</a></li>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="beranda">
+        <h2>Selamat Datang di Salon Anita!</h2>
+        <p>Selamat Datang, [Nama Pengguna]!</p>
+        <button onclick="window.location.href='#janji'">Buat Janji</button>
+        <button onclick="window.location.href='#layanan'">Lihat Layanan</button>
+        <button onclick="window.location.href='#pembayaran'">Cek Status Pembayaran</button>
+        <h3>Promo Terbaru</h3>
+        <p>Diskon 20% untuk layanan hair spa!</p>
+    </section>
+
+    <section id="layanan">
+        <h2>Layanan Kami</h2>
+        <div class="layanan-item">
+            <img src="images/haircut.jpg" alt="Haircut">
+            <h3>Haircut</h3>
+            <p>Rp 50.000</p>
+            <button>Detail</button>
+        </div>
+        <div class="layanan-item">
+            <img src="images/hairspa.jpg" alt="Hair Spa">
+            <h3>Hair Spa</h3>
+            <p>Rp 100.000</p>
+            <button>Detail</button>
+        </div>
+        <div class="layanan-item">
+            <img src="images/manicure.jpg" alt="Manicure">
+            <h3>Manicure</h3>
+            <p>Rp 75.000</p>
+            <button>Detail</button>
+        </div>
+    </section>
+
+    <section id="janji">
+        <h2>Buat Janji Baru</h2>
+        <form method="post" action="#">
+            <label for="layanan-janji">Pilih Layanan:</label>
+            <select id="layanan-janji" name="layanan">
+                <option value="haircut">Haircut</option>
+                <option value="hairspa">Hair Spa</option>
+                <option value="manicure">Manicure</option>
+            </select>
+            <label for="tanggal">Pilih Tanggal:</label>
+            <input type="date" id="tanggal" name="tanggal">
+            <label for="penatarambut">Pilih Penata Rambut:</label>
+            <select id="penatarambut" name="penatarambut">
+                <option value="stylist1">Stylist 1</option>
+                <option value="stylist2">Stylist 2</option>
+            </select>
+            <button type="submit">Konfirmasi</button>
+        </form>
+    </section>
+
+    <section id="pembayaran">
+        <h2>Daftar Tagihan</h2>
+        <div class="tagihan-item">
+            <p>Haircut - Rp 50.000</p>
+            <button>Bayar Sekarang</button>
+        </div>
+        <div class="tagihan-item">
+            <p>Hair Spa - Rp 100.000</p>
+            <button>Bayar Sekarang</button>
+        </div>
+        <h3>Unggah Bukti Pembayaran</h3>
+        <form method="post" action="#" enctype="multipart/form-data">
+            <input type="file" id="buktibayar" name="buktibayar">
+            <button type="submit">Unggah</button>
+        </form>
+    </section>
+
+    <section id="umpanbalik">
+        <h2>Berikan Umpan Balik</h2>
+        <form method="post" action="#">
+            <label for="layanan-umpanbalik">Pilih Layanan:</label>
+            <select id="layanan-umpanbalik" name="layanan">
+                <option value="haircut">Haircut</option>
+                <option value="hairspa">Hair Spa</option>
+                <option value="manicure">Manicure</option>
+            </select>
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5">
+            <label for="komentar">Komentar:</label>
+            <textarea id="komentar" name="komentar"></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <section id="profil">
+        <h2>Profil Pengguna</h2>
+        <p>Nama: [Nama Pengguna]</p>
+        <p>Email: [Email Pengguna]</p>
+        <p>No. Telepon: [No. Telepon Pengguna]</p>
+        <button>Ubah Password</button>
+        <button>Edit Profil</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Salon Anita. All rights reserved.</p>
+    </footer>
+</body>
+</html>
